@@ -7,11 +7,27 @@
 //   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
 
 #ifndef PCH_H
-
+#include <string>
+#include <iostream>
+const int N = 7;   //Количество доступных процессов
 using namespace std;
 
+struct Process
+{
+	float *Data;      // данные процесса, в случае отсутствия данных Data==NULL
+	bool calculated; // флаг, true в случае если данные вычислены по формуле
+};
+struct Command
+{
+	string com;           //Команда которую вводит пользователь
+	float data;         // Данные которое пользователь указывает как первый параметр 
+	int  *addressProc; //Адреса процессов которые хочет изменить пользователь 
+};
 
-
+Command *out();
+void WriteProcces(Process *&);
+void inp(Process *);
+void clear(Command *, Process *);
 #define PCH_H
 
 // TODO: add headers that you want to pre-compile here

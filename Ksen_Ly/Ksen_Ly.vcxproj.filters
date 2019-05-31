@@ -27,4 +27,12 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="T3.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="ReadME.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
